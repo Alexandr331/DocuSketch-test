@@ -1,0 +1,42 @@
+@mixin shadow {
+    box-shadow: 3px 2px 8px 0px rgba(193, 193, 193, 0.75);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.app-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.random-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    @include shadow;
+    background-color: rgb(255, 252, 240);
+    transition: all .5s linear;
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.vertical {
+    // transform: rotate(90deg);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.icon {
+    margin-top: 50px;
+}
+
+.icon-container {
+    @include shadow;
+}
